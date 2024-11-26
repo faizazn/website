@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Publications</title>
+</head>
+<style>
+    .hidden {
+      display: none;
+    }
+  </style>
+<body>
+  <!-- Header -->
+  <header style="background-color: #1a1a1a; color: #fff; padding: 10px 15px; display: flex; align-items: center;  position: sticky; top: 0; z-index: 1000;">
+    <img src="logo1.jpeg" alt="Logo 1" style="height: 60px; width: 230px; margin-right: 15px;"> <!-- Adjust margin for space between logos -->
+    <img src="logo2.jpg" alt="Logo 2" style="height: 60px; width: 230px;">
+  </header>
+  
+  <!-- Sidebar (left side navigation) -->
+  <div class="sidebar-container">
+   
+    <ul class="sidebar-navigation">
+      <li class="mb-3">
+        <a href="index.html" class="text-decoration-none">
+          <i class="fa fa-home" aria-hidden="true"></i> Accueil
+        </a>
+      </li>
+      <li class="mb-3">
+        <a href="présentation.html" class="text-decoration-none">
+          <i class="fa fa-tachometer" aria-hidden="true"></i> Présentation
+        </a>
+      </li>
+      <li class="mb-3">
+        <a href="publications.html" class="text-decoration-none">
+          <i class="fa fa-users" aria-hidden="true"></i> Publications
+        </a>
+      </li>
+      <li class="mb-3">
+        <a href="encadrements.html" class="text-decoration-none">
+          <i class="fa fa-cog" aria-hidden="true"></i> Encadrement
+        </a>
+      </li>
+      <li class="mb-3">
+        <a href="cours.html" class="text-decoration-none">
+          <i class="fa fa-info-circle" aria-hidden="true"></i> Cours dispenses
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Main content area with two columns -->
+  <div class="content-container">
+    <div class="container d-flex justify-content-center">
+      <div class="text-center p-4">
+        <h1 style="font-size: 48px; color: #2574A9;">𝓟𝓾𝓫𝓵𝓲𝓬𝓪𝓽𝓲𝓸𝓷𝓼</h1><br>
+      </div>
+    </div>
+    <div class="container my-4 text-center">
+        <!-- Buttons -->
+        <button class="btn btn-outline-secondary mx-2" onclick="filterCards('all')">Show All</button>
+        <button class="btn btn-outline-primary mx-2" onclick="filterCards('article')">Articles</button>
+        <button class="btn btn-outline-primary mx-2" onclick="filterCards('chapter')">Chapters in Books</button>
+        <button class="btn btn-outline-primary mx-2" onclick="filterCards('papiers')">Papiers de Conférences</button>
+      </div>
+    <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Coastal watershed and morphologic changes of their mouth along the Moroccan Mediterranean coastline</h5>
+              <p class="paragraph">Euro-Mediterr J Environ Integr (2024)</p>
+              <hr>
+              <i><p class="card-text">Haissen, A.E., Khalidi, K.E., Zourarah, B. et al</p></i><br>
+              <a href="https://doi.org/10.1007/s41207-024-00677-y " target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Shoreline Change and Climatic Variability along the Moulay Bousselham Coast (Moroccan Atlantic)</h5>
+              <p class="paragraph">J. of Coastal Research, 40(5):860-874 (2024)</p>
+              <hr>
+              <i><p class="card-text">Tarik Belrhaba, Mounir Hakkou, Tony Rey, Abdelahq Aangri, Yann Krien, Zakarya Elmostafa, Frédéric Leone, Aïcha Benmohammadi</p></i><br>
+              <a href="https://doi.org/10.2112/JCOASTRES-D-23-00082.1" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Storm's influence on long-term shoreline evolution along Casablanca-Mohammedia (Morocco)</h5>
+              <p class="paragraph">Regional Studies in Marine Science. April 2024 (in print). DOI: 10.1016/j.rsma.2024.103549</p>
+              <hr>
+              <i><p class="card-text">Taoufiq Chtioui, Mounir Hakkou, Aangri abdelhaq, Aicha Benmohammadi, Mehdi Maanane (2024)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Risk Assessment of Marine Flooding along the Agadir and Taghazout Coasts (Moroccan Atlantic)</h5>
+              <p class="paragraph">Journal of Coastal Research, Vol. 40, No. 1, 2024. DOI: 10.2112/JCOASTRES-D-23-00033.1</p>
+              <hr>
+              <i><p class="card-text">Abdelhaq Aangri, Mounir Hakkou, Yann Krien, Toufik Chtioui, Aïcha Benmohammadi. (2024)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Classwms: A MATLAB GUI for Water Masses Classification Using Clustering Analysis and K Nearest Neighbors. </h5>
+              <p class="paragraph">Volume 26, 2024,101741</p>
+              <hr>
+              <i><p class="card-text">Ayoub Belattmania, Mounir Hakkou, Toufik Chtioui, Abdelhaq Aangri, Assia Abdenour, El Mehdi Latni, abdessalam benharra, Abdelkrim EL ARRIM (2023)</p></i><br>
+              <a href="https://doi.org/10.1016/j.softx.2024.101741" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Prediction of coastal vulnerability with machine learning techniques, Mediterranean coast of Tangier-Tetouan, Morocco</h5>
+              <p class="paragraph">Estuarine, Coastal and Shelf Science. Volume 291</p>
+              <hr>
+              <i><p class="card-text">Fannassi, Y., Ennouali, Z. Hakkou, M., Benmohammadi, A., Al-Mutiry, M.,Elbisy, M.S. (2023)</p></i><br>
+              <a href="https://doi.org/10.1016/j.ecss.2023.108422" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Predicting Shoreline Change for the Agadir and Taghazout Coasts (Morocco)</h5>
+              <p class="paragraph">Journal of Coastal Research, Vol. 38, No. 5, 2022. DOI: 10.2112/JCOASTRES-D-22-00006.1</p>
+              <hr>
+              <i><p class="card-text">Abdelhaq Aangri, Mounir Hakkou, Yann Krien, Aïcha Benmohammadi (2022)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Coastal land use and shoreline evolution along the Nador lagoon Coast in Morocco</h5>
+              <p class="paragraph">Geocarto International. DOI:10.1080/10106049.2021.1974958</p>
+              <hr>
+              <i><p class="card-text">Khalid El Khalidi, Amine Bourhili, Ingrida Bagdanavičiūtė, Abdenaim Minoubi, Mounir Hakkou, Bendahhou Zourarah & Mehdi Maanan (2021)</p></i><br>
+              <a href="https://doi.org/10.1080/10106049.2021.1974958 " target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Influence of the Margin of Error Related to the Use of Aerial Photographs on the Interpretation of the Shoreline Changes: Evidence from Three Case Studies from the Atlantic Coast of Morocco</h5>
+              <p class="paragraph">International Journal of Advanced Research in Engineering and Technology, 11(12), 2020, pp. 457-467</p>
+              <hr>
+              <i><p class="card-text">Khalid El Khalidi, Mehdi Maanan, Mounir Hakkou, Imane Nafouri and Bendahhou Zourarah (2020)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Spatio-temporal analysis of shoreline changes rate using automatic computation and geospatial tools in Tetouan coast, Morocco</h5>
+              <p class="paragraph">Estuarine, Coastal and Shelf Science</p>
+              <hr>
+              <i><p class="card-text">Fatima Zahra Benkhattab, Mounir Hakkou, Abdelmounim El Mrini,Hassan Rhinane, Mehdi Maanan (2020)</p></i><br>
+              <a href="https://doi.org/10.1007/s11069-020-04179-2" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Assessing and mapping the coastal flooding hazard using geospatial tools and static model along Kenitra coast, Morocco</h5>
+              <p class="paragraph">Ocean and Coastal Management 169 (2019) 264–272</p>
+              <hr>
+              <i><p class="card-text">M. Hakkou, T.Belrhaba, M.Maanane, K.Khalidi, Frédéric Leone, B. Zourarah, A. Benmohammadi (2019)</p></i><br>
+              <a href="https://doi.org/10.1016/j.ocecoaman.2018.12.032" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Multi-decadal assessment of shoreline changes using geospatial tools and automatic computation in Kenitra coast, Morocco</h5>
+              <p class="paragraph">Ocean and Coastal Management 163 (2018) 232–239 233</p>
+              <hr>
+              <i><p class="card-text">M. Hakkou, M.Maanane T.Belrhaba, k. El Khalidi, D. El Wai, Benmohammadi (2018)</p></i><br>
+              <a href="https://doi.org/10.1016/j.ocecoaman.2018.07.003" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">A Geospatial approach for assessing the impacts of sea-level rise and flooding on the ! Kenitra coast (Morocco)</h5>
+              <p class="paragraph">J. Mater. Environ. Sci., 2018, Volume 9, Issue 5, Page 1480-1488</p>
+              <hr>
+              <i><p class="card-text">H. Azidane, A. Benmohammadi, M. Hakkou, B. Magrane, S. Haddout (2018)</p></i><br>
+              <a href="https://doi.org/10.26872/jmes.2018.9.5.162" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Evaluating the impacts of sea-level rise on the Moroccan coast:quantifying coastal erosion and inundation in a Atlantic alluvial plain (Kenitra coastal)</h5>
+              <p class="paragraph">Episodes Vol. 40, No. 4</p>
+              <hr>
+              <i><p class="card-text">Azidane, H., Benmohammadi, A., Haddout, S., Hakkou, M., Belrhaba, T., Michel, B. and Magrane, B. (2017)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Étude préliminaire des effets de l’Oscillation Nord Atlantique d'hiver sur les cernes du cèdre de l’Atlas, Cedrus atlantica (Endl.) Carrière, au Maroc</h5>
+              <p class="paragraph">Bulletin de l’institut scientifique, Rabat, section Sciences de la Vie, 2016, n° 38, 43-50</p>
+              <hr>
+              <i><p class="card-text">R. Ilmen, H. Benjelloun, L. Ouahmane, M. Hakkou & M. Benghazi (2016)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Perspectives d’optimisation technique de la gouvernance environnementale des activités du dragage du sable marin au Maroc</h5>
+              <p class="paragraph">Bulletin de l’institut scientifique, Rabat, section Sciences de la Terre, 2015, N°37</p>
+              <hr>
+              <i><p class="card-text">Hakkou, M., Benmohammadi, A.,  Castelle B., Bertin,X., Labrimi M.,  El Hassani, A., Layachi, M. (2015)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Wave climate and morphosedimentary characteristics of the Kénitra-Bouknadel sandy coast, Morocco.Environmental Earth Sciences, 64, 1729-1739</h5>
+              <p class="paragraph">DOI: 10.1007/s112665-011-0977-0</p>
+              <hr>
+              <i><p class="card-text">Hakkou, M., Castelle, B., Benmohammadi, A., Zourarah, B. (2011)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Suivi des activités d’extraction du sable marin au Maroc</h5>
+              <p class="paragraph">Editions Paralia CFL. DOI:10.5150/JNGCGC.2016.084</p>
+              <hr>
+              <i><p class="card-text">M. Hakkou, A. Benmohammadi, B. Castelle, H. Azidane (2016)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="article">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Climat de houle et caractéristiques morpho-sédimentaires du littoral de Bouknadel-Kénitra (Maroc)</h5>
+              <p class="paragraph">Editions Paralia CFL. DOI:10.5150/jngcgc.2010.039-H</p>
+              <hr>
+              <i><p class="card-text">Hakkou, M., Castelle, B., Benmohammadi, A., Zourarah, B. (2010)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="chapter">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">The Risk of Marine Submersion Along the Ain Sbâa Coastline with a Maximum Tide and Pessimiste Scenario of Sea Level Rise (Atlantic, Morocco)</h5>
+              <p class="paragraph">March 2024. In book: Recent Advancements from Aquifers to Skies in Hydrogeology, Geoecology, and Atmospheric Sciences. Springer Nature Switzerland</p>
+              <hr>
+              <i><p class="card-text">Taoufiq Chtioui, Mounir Hakkou, Aangri abdelhaq, El Mostapha Zakariya, Aicha Benmohammadi (2024)</p></i><br>
+              <a href="https://doi.org/10.1007/978-3-031-47079-0_51" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="chapter">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Mapping the Shoreline Evolution in Response to Sea Level Rise Along Agadir Bay, Morocco: Geospatial and Empirical Approach. (March 2024)</h5>
+              <p class="paragraph">In book: Recent Advancements from Aquifers to Skies in Hydrogeology, Geoecology, and Atmospheric Sciences. Springer Nature Switzerland. pp.303-30</p>
+              <hr>
+              <i><p class="card-text">Abdelhaq Aangri, Mounir Hakkou, Yann Krien, Toufik Chtioui, Zakaria Elmostafa. Aïcha Benmohammadi. (2024)</p></i><br>
+              <a href="https://doi.org/10.1007/978-3-031-47079-0_68" target="_blank" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="col-sm-4 mb-2" id="papiers">
+          <div class="card col-sm-11 mx-auto"> <!-- Added mx-auto for centering -->
+            <div class="card-body">
+              <h5 class="card-title">Assessment of Sand Dune Volume Using Seismic Refraction in the Atlantic Coast, NW of Morocco</h5>
+              <p class="paragraph">Conference: 82nd EAGE Annual Conference & Exhibition. January 2020. DOI: 10.3997/2214-4609.202011922</p>
+              <hr>
+              <i><p class="card-text">Driss el Ouai, I. Kassimi, A. Mojahid,. M. Tadili, M. Hakkou, A. Ammar (2020)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 mb-2" id="papiers">
+            <div class="card col-sm-11 mx-auto"> 
+              <div class="card-body">
+                <h5 class="card-title">Coastal watersheds of the Moroccan Mediterranean margin, important source of terrigenous inputs for the continental shelf</h5>
+                <p class="paragraph">Congrès international. La science au service de development durable. Université Chouaib Doukkali, Faculté des Sciences, El Jadida, 9 et 10 Mars 2023</p>
+                <hr>
+                <i><p class="card-text">Abdelouahab El Haissen, Bendahhou Zourarah, Khalid El Khalidi, Mounir Hakkou, Adil Chair, Omar Ettahiri, and Mohammed Idrissi. (2023)</p></i><br>
+                <a href="#" class="btn btn-primary">Voir Plus</a>
+              </div>
+            </div>
+          </div>
+        <div class="col-sm-4 mb-2" id="papiers">
+          <div class="card col-sm-11 mx-auto"> 
+            <div class="card-body">
+              <h5 class="card-title">Evaluating the impacts of sea-level rise on the Moroccan coast: quantifying coastal erosion and inundation in an Atlantic alluvial plain kénitra coastal</h5>
+              <p class="paragraph">Conference: International Conference on Geospatial Technologies for Water Resources. On the occasion of the COP22, Marrakech Morocco (November 2016)</p>
+              <hr>
+              <i><p class="card-text">Hind Azidane, Aïcha Benmohammadi, Mounir Hakkou, Tarik Belrhaba, Magrane Bouchaib (2016)</p></i><br>
+              <a href="#" class="btn btn-primary">Voir Plus</a>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+      
+      
+  </div>
+  <script>
+    function filterCards(type) {
+      // Get all cards
+      const cards = document.querySelectorAll('.col-sm-4');
+
+      // Show or hide cards based on the filter
+      cards.forEach(card => {
+        if (type === 'all') {
+          card.classList.remove('hidden'); // Show all cards
+        } else {
+          if (card.id === type) {
+            card.classList.remove('hidden'); // Show matched card
+          } else {
+            card.classList.add('hidden'); // Hide unmatched card
+          }
+        }
+      });
+    }
+  </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
